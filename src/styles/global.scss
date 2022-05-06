@@ -1,0 +1,173 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+// Layout
+html {
+  line-height: 1em;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply font-sans leading-tight text-gray-800;
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.container {
+  @apply max-w-[1412px] mx-auto px-10;
+
+  &-xl {
+    @apply px-5;
+  }
+
+  &-fluid {
+    @apply max-w-full;
+  }
+
+  @screen 2xl {
+    @apply max-w-[1380px];
+  }
+
+  @screen lg {
+    @apply px-5;
+  }
+
+  @screen xs {
+    @apply px-4;
+  }
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  @apply font-sriracha text-primary;
+}
+
+p {
+  @apply leading-normal;
+}
+
+a {
+  @apply text-primary;
+}
+
+h1 {
+  @apply text-8xl;
+
+  @screen lg {
+    @apply text-7xl;
+  }
+
+  @screen md {
+    @apply text-6xl;
+  }
+
+  @screen xs {
+    @apply text-4xl;
+  }
+}
+h2 {
+  @apply text-4xl;
+
+  @screen lg {
+    @apply text-3xl;
+  }
+
+  @screen md {
+    @apply text-2xl;
+  }
+}
+h3 {
+  @apply text-3xl;
+
+  @screen lg {
+    @apply text-2xl;
+  }
+
+  @screen lg {
+    @apply text-xl;
+  }
+
+  @screen xs {
+    @apply text-lg;
+  }
+}
+p {
+  @apply text-lg leading-6;
+
+  @screen lg {
+    @apply text-base leading-6;
+  }
+  @screen md {
+    @apply text-sm leading-6;
+  }
+}
+
+// ICONS
+.gg-close {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(2.4);
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+}
+
+.gg-close::after,
+.gg-close::before {
+  content: '';
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(45deg);
+  border-radius: 5px;
+  top: 8px;
+  left: 1px;
+}
+
+.gg-close::after {
+  transform: rotate(-45deg);
+}
+
+.gg-menu {
+  transform: scale(2);
+}
+
+.gg-menu,
+.gg-menu::after,
+.gg-menu::before {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 3px;
+  background: currentColor;
+}
+
+.gg-menu::after,
+.gg-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+}
+
+.gg-menu::after {
+  top: 6px;
+}
